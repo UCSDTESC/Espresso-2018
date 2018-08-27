@@ -5470,59 +5470,33 @@ h1 {
     font-size: 1.5rem;
     color: #5A5A5A; }
 
-.accordian {
-  position: relative;
-  width: 100%;
-  color: #78777C;
-  overflow: hidden;
-  padding: 0.25rem 1rem; }
-  .accordian__input {
-    position: absolute;
-    opacity: 0;
-    z-index: -1; }
-    .accordian__input + .accordian__label::after {
-      content: "+"; }
-    .accordian__input:checked ~ .accordian__content {
-      max-height: 100rem;
-      padding: 1.8rem 2rem;
-      border-width: 2px;
-      transition: max-height .35s, padding 0s, border-width 0s; }
-    .accordian__input:checked + .accordian__label::after {
-      transform: rotate(135deg); }
-  .accordian__label {
-    position: relative;
-    display: block;
-    padding: 1rem 5rem 1rem 2rem;
-    border-radius: 0.3rem;
-    border: 2px solid #E1E1E1;
-    font-weight: 500;
-    line-height: 2rem;
-    text-align: left;
-    cursor: pointer;
-    font-size: 1.1rem; }
-    .accordian__label::after {
-      position: absolute;
-      right: 1.5rem;
-      top: 0;
-      display: block;
-      width: 1.5rem;
-      height: 3.5rem;
-      font-size: 2rem;
-      color: #E1E1E1;
-      line-height: 3.5rem;
-      text-align: center;
-      transition: transform .35s;
-      transform-origin: center; }
-  .accordian__content {
-    max-height: 0;
-    overflow: hidden;
-    border: 0 solid #03668D;
-    border-radius: 0.3rem;
-    text-align: left;
-    padding: 0;
-    transition: max-height .35s, padding 0s 0.24s, border-width 0s 0.24s; }
-    .accordian__content--sponsor {
-      border-color: #03668D; }
+.question {
+  border: solid 2px #ddd;
+  font-size: 1.2rem;
+  text-align: initial;
+  border-radius: 0.3rem;
+  margin-bottom: 1rem; }
+  .question__heading {
+    margin: 0.8rem 2rem; }
+    .question__heading a {
+      color: grey;
+      font-size: 1.4rem; }
+      .question__heading a:hover {
+        text-decoration: none; }
+      .question__heading a[aria-expanded="true"] .question__icon {
+        transform: rotate(135deg);
+        -webkit-transition-duration: 0.5s;
+        -moz-transition-duration: 0.5s;
+        -o-transition-duration: 0.5s;
+        transition-duration: 0.5s; }
+      .question__heading a[aria-expanded="false"] .question__icon {
+        transform: rotate(0);
+        -webkit-transition-duration: 0.5s;
+        -moz-transition-duration: 0.5s;
+        -o-transition-duration: 0.5s;
+        transition-duration: 0.5s; }
+  .question__content {
+    margin: 0 2rem; }
 
 .companies {
   text-align: center;
